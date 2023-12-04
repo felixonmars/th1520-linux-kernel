@@ -439,7 +439,6 @@
 			};
 		};
 
-
 		gmacapb_syscon0: syscon@ffec003000 {
 			compatible = "thead,th1520-gmacapb-syscon", "syscon";
 			reg = <0xff 0xec003000 0x0 0x1000>;
@@ -448,6 +447,11 @@
 		gmacapb_syscon1: syscon@ffec004000 {
 			compatible = "thead,th1520-gmacapb-syscon", "syscon";
 			reg = <0xff 0xec004000 0x0 0x1000>;
+		};
+
+		padctrl1_apsys: pinctrl@ffe7f3c000 {
+			compatible = "thead,th1520-group2-pinctrl";
+			reg = <0xff 0xe7f3c000 0x0 0x1000>;
 		};
 
 		gpio0: gpio@ffec005000 {
@@ -484,6 +488,11 @@
 				#interrupt-cells = <2>;
 				interrupts = <57 IRQ_TYPE_LEVEL_HIGH>;
 			};
+		};
+
+		padctrl0_apsys: pinctrl@ffec007000 {
+			compatible = "thead,th1520-group3-pinctrl";
+			reg = <0xff 0xec007000 0x0 0x1000>;
 		};
 
 		uart2: serial@ffec010000 {
@@ -783,6 +792,11 @@
 			clocks = <&aonsys_clk>;
 			#thermal-sensor-cells = <1>;
 			status = "disabled";
+		};
+
+		padctrl_aosys: pinctrl@fffff4a000 {
+			compatible = "thead,th1520-group1-pinctrl";
+			reg = <0xff 0xfff4a000 0x0 0x2000>;
 		};
 
 		ao_gpio1: gpio@fffff52000 {
