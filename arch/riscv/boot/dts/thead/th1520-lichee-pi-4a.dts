@@ -106,7 +106,7 @@
 		regulator-name = "VCC5V_USB";
 		regulator-min-microvolt = <5000000>;
 		regulator-max-microvolt = <5000000>;
-		gpio = <&portb 22 GPIO_ACTIVE_HIGH>;
+		gpio = <&gpio1 22 GPIO_ACTIVE_HIGH>;
 		enable-active-high;
 		regulator-always-on;
 	};
@@ -163,7 +163,7 @@
 			regulator-name = "soc_vdd_3v3_en";
 			regulator-min-microvolt = <3300000>;
 			regulator-max-microvolt = <3300000>;
-			gpio = <&porta 30 1>;
+			gpio = <&gpio0 30 1>;
 			enable-active-high;
 			regulator-always-on;
 		};
@@ -191,7 +191,7 @@
 			regulator-name = "soc_vdd5v_se_en";
 			regulator-min-microvolt = <5000000>;
 			regulator-max-microvolt = <5000000>;
-			gpio = <&portc 14 1>;
+			gpio = <&gpio2 14 1>;
 			enable-active-high;
 			regulator-always-on;
 		};
@@ -201,7 +201,7 @@
 			regulator-name = "soc_wcn33_en";
 			regulator-min-microvolt = <3300000>;
 			regulator-max-microvolt = <3300000>;
-			gpio = <&portc 29 1>;
+			gpio = <&gpio2 29 1>;
 			enable-active-high;
 			regulator-always-on;
 		};
@@ -211,7 +211,7 @@
 			regulator-name = "soc_vbus_en";
 			regulator-min-microvolt = <3300000>;
 			regulator-max-microvolt = <3300000>;
-			gpio = <&portb 22 1>;
+			gpio = <&gpio1 22 1>;
 			enable-active-high;
 			regulator-always-on;
 		};
@@ -505,7 +505,7 @@
 	};
 };
 
-&porte {
+&aogpio {
 	sel-usb-hub-hog {
 		gpio-hog;
 		gpios = <4 GPIO_ACTIVE_HIGH>;
